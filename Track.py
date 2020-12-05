@@ -38,6 +38,7 @@ else:
 
 courir = int(input("Choose your courir:\n1. BPost\n2. PostNL\n3. DPD\n> "))
 
+# ===========BPOST===========
 if courir == 1:
     def bpostHook(status, sender):
         webhook = DiscordWebhook(url=hook, username="BeChefs BPost Tracker")
@@ -90,6 +91,8 @@ if courir == 1:
             print(f"Error: Parcel not found")
             print(f"===============================================\n")
 
+
+# ===========POSTNL===========
 elif courir == 2:
     def postnlHook(status, sender):
         webhook = DiscordWebhook(url=hook, username="BeChefs PostNL Tracker")
@@ -142,6 +145,8 @@ elif courir == 2:
             print(f"Error: Parcel not found")
             print(f"===============================================\n")
 
+
+# ===========DPD===========
 elif courir == 3:
     def dpdHook(status, location):
         webhook = DiscordWebhook(url=hook, username="BeChefs DPD Tracker")
